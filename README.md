@@ -24,36 +24,36 @@ There will be no UI for the app. Booking of tickets will be done through APIs ðŸ
 
 Assumptions:
 1. One event is available.
-2. Number of seats available in the event are as follows, with numbering and price mentioned
-   a. Gold : 300 : G1, G2, G3, G4, ... G300 : Rs. 3,999/- each
-   b. Silver : 400 : S1, S2, S3, S4, ... S400 : Rs. 2,999/- each
-   c. Bronze : 600 : B1, B2, B3, B4, ... B600 : Rs. 1,999/- each
-   d. General : 1000 : GL1, GL2, GL3, GL4, ... GL1000 : Rs. 999/- each
-   e. VIP : 100 : V1, V2, V3, V4, ... V100 : Rs. 9,999/- each
-   f. VVIP : 50 : VV1, VV2, VV3, VV4, ... VV50 : Rs. 12,999/- each
+2. Number of seats available in the event are as follows, with numbering and price mentioned: <br>
+   a. Gold : 300 : G1, G2, G3, G4, ... G300 : Rs. 3,999/- each <br>
+   b. Silver : 400 : S1, S2, S3, S4, ... S400 : Rs. 2,999/- each <br>
+   c. Bronze : 600 : B1, B2, B3, B4, ... B600 : Rs. 1,999/- each <Br>
+   d. General : 1000 : GL1, GL2, GL3, GL4, ... GL1000 : Rs. 999/- each <br>
+   e. VIP : 100 : V1, V2, V3, V4, ... V100 : Rs. 9,999/- each <br>
+   f. VVIP : 50 : VV1, VV2, VV3, VV4, ... VV50 : Rs. 12,999/- each <br>
 3. Will simulate launch of event and APIs to trigger event booking through APIs.
 
 Goal:
 1. Be able to provide easy and hassle free booking experience.
 2. Should not overbook the seats.
-3. Should be able to handle payment gateway (will use a simulation that will work like one) -- giving a standard timeout randomly
-   i.e. for each transaction that occurs through the payment gateway, there will be random outcomes such as
-   success  : payment went through successfully, tickets booked
-   failure  : Payment will be retried once, tickets booked
-   failure  : No payment retry, tickets not booked
-   failure  : Timeout from payment gateway, retry with a different gateway, tickets booked
-   failure  : Timeout from one gateway, retry from different gateway also failed, tickets not booked.
+3. Should be able to handle payment gateway (will use a simulation that will work like one) -- giving a standard timeout randomly <Br>
+   i.e. for each transaction that occurs through the payment gateway, there will be random outcomes such as <br>
+   a. success  : payment went through successfully, tickets booked <br>
+   b. failure  : Payment will be retried once, tickets booked <br>
+   c. failure  : No payment retry, tickets not booked <br>
+   d. failure  : Timeout from payment gateway, retry with a different gateway, tickets booked <br>
+   e. failure  : Timeout from one gateway, retry from different gateway also failed, tickets not booked. <br>
 5. Users should be permitted to select seats of choice.
-6. Output for each API call should show the following
-   a. Number of seats booked and seat numbers
-   b. Payment type and total amount
-   c. Time taken for entire request
+6. Output for each API call should show the following <br>
+   a. Number of seats booked and seat numbers <br>
+   b. Payment type and total amount <br>
+   c. Time taken for entire request <br>
    ...
 7. The types of payment gateways are:
-   a. Paytm
-   b. Razorpay
-   c. CCAvenue
-   d. SBI
+   a. Paytm <br>
+   b. Razorpay <br>
+   c. CCAvenue <br>
+   d. SBI <br>
   User will be allowed to retry with any of the random payment gateways. Since the payment gateway is a mock, this will be a random selection from within the code.
 
 
