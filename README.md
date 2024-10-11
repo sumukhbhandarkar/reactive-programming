@@ -1,4 +1,4 @@
-A spring boot application 
+## A spring boot application 
 1. Learning to set up mongo
 2. Learning to set up and use Cassandra
 3. Learning to setup and use Postgres
@@ -16,13 +16,11 @@ i.e. PUT/POST/GET operations and the time taken for each of these instances.
 .. Will also setup a reverse proxy and loadbalancer later during the development of the project.
 
 ### About the project
-Spring boot based application to simulate Bookmyshow application
-Specifically booking a particular event. 
+Spring boot based application to simulate online ticket booking application
+Specifically booking for a particular live event. 
 There will be no UI for the app. Booking of tickets will be done through APIs 😛
 
-
-
-Assumptions:
+#### Assumptions:
 1. One event is available.
 2. Number of seats available in the event are as follows, with numbering and price mentioned: <br>
    a. Gold : 300 : G1, G2, G3, G4, ... G300 : Rs. 3,999/- each <br>
@@ -31,9 +29,14 @@ Assumptions:
    d. General : 1000 : GL1, GL2, GL3, GL4, ... GL1000 : Rs. 999/- each <br>
    e. VIP : 100 : V1, V2, V3, V4, ... V100 : Rs. 9,999/- each <br>
    f. VVIP : 50 : VV1, VV2, VV3, VV4, ... VV50 : Rs. 12,999/- each <br>
-3. Will simulate launch of event and APIs to trigger event booking through APIs.
+3. Will simulate launch of event and APIs to trigger event booking through APIs. <br>
+4. Number of total seats and seat map will be loaded onto a database <br>
+   a. 300 + 400 + 600 + 1000 + 100 + 50 = 2450 seats in total <br>
+   b. Create 6 tables, named after each of the seat types. i.e Gold, Silver, Bronze, General, VIP and VVIP <br>
+   c. Columns would be: Seat number, bookingTime, userName, amountPaid, paymentGatewayUsed, status
+5. One user can book a maximum of 4 tickets.
 
-Goal:
+#### Goal:
 1. Be able to provide easy and hassle free booking experience.
 2. Should not overbook the seats.
 3. Should be able to handle payment gateway (will use a simulation that will work like one) -- giving a standard timeout randomly <Br>
