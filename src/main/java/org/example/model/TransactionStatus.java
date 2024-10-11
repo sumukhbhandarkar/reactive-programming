@@ -1,0 +1,9 @@
+package org.example.model;
+
+public enum TransactionStatus {
+    SUCCESS_TICKET_BOOKED,
+    FAILURE_PAYMENT_GATEWAY_TIMEOUT,
+    FAILURE_BANK_API_ISSUES,
+    FAILURE_RETRY_PAYMENT_SUCCESS,
+    FAILURE_RETRY_PAYMENT_FAILED
+}
